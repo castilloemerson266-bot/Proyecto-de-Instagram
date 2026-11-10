@@ -14,7 +14,7 @@ class NavegacionPrincipal extends StatefulWidget {
   });
 
   final String username;
-  final VoidCallback onLogout;
+  final ValueChanged<BuildContext> onLogout;
 
   @override
   State<NavegacionPrincipal> createState() => _EstadoNavegacionPrincipal();
@@ -82,7 +82,7 @@ class _EstadoNavegacionPrincipal extends State<NavegacionPrincipal> {
           PopupMenuButton<String>(
             tooltip: 'Opciones de cuenta',
             onSelected: (value) {
-              if (value == 'logout') widget.onLogout();
+              if (value == 'logout') widget.onLogout(context);
             },
             itemBuilder: (context) => const [
               PopupMenuItem(

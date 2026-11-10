@@ -11,13 +11,13 @@ class PantallaMensajes extends StatelessWidget {
   // Conversaciones fijas para representar la bandeja de entrada.
   static const _conversations = [
     (
-      name: 'TEAM FLORES 🐘🤎',
+      name: 'Carlos Cruz 🐘🤎',
       preview: '4+ mensajes nuevos · 17 h',
       unread: true,
       colors: [Color(0xFF833AB4), Color(0xFFE1306C)],
     ),
     (
-      name: 'Angela Valle C.',
+      name: 'Samantha posso.',
       preview: 'Enviado hace 17 h',
       unread: false,
       colors: [Color(0xFFEF9A3D), Color(0xFFBE405C)],
@@ -29,19 +29,19 @@ class PantallaMensajes extends StatelessWidget {
       colors: [Color(0xFF405DE6), Color(0xFF42A5A0)],
     ),
     (
-      name: '❤️🤣watafak 🤣❤️',
+      name: '❤️🤣Cindy Rivas 🤣❤️',
       preview: '4+ mensajes nuevos · 20 h',
       unread: true,
       colors: [Color(0xFF31A8A0), Color(0xFF345B8C)],
     ),
     (
-      name: 'Ivis Valle',
+      name: 'Los Six Seven 6🫲🥴🫱7',
       preview: '4+ mensajes nuevos · 21 h',
       unread: true,
       colors: [Color(0xFFFCAF45), Color(0xFFE1306C)],
     ),
     (
-      name: 'TEAM NENE. 🚀💙',
+      name: 'UNICAH. 🚀💙',
       preview: '4+ mensajes nuevos · 21 h',
       unread: false,
       colors: [Color(0xFF5869C8), Color(0xFF833AB4)],

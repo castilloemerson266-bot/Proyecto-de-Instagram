@@ -19,7 +19,7 @@ class _EstadoPantallaInicio extends State<PantallaInicio> {
   // Datos de muestra; no se descargan imágenes ni publicaciones de Internet.
   static const _posts = [
     (
-      username: 'sofia.viaja',
+      username: 'Emerson.viaja',
       location: 'Costa Rica',
       caption: 'Un lugar para guardar en la memoria. 🌴',
       likes: '1,284',
@@ -120,7 +120,8 @@ class _EstadoPantallaInicio extends State<PantallaInicio> {
   Widget _buildPost(BuildContext context, int index) {
     final post = _posts[index];
     final isLiked = _likedPosts.contains(index);
-    final likeCount = int.parse(post.likes.replaceAll(',', '')) + (isLiked ? 1 : 0);
+    final likeCount =
+        int.parse(post.likes.replaceAll(',', '')) + (isLiked ? 1 : 0);
     final formattedLikeCount = likeCount >= 1000
         ? '${likeCount ~/ 1000},${(likeCount % 1000).toString().padLeft(3, '0')}'
         : '$likeCount';
@@ -143,7 +144,10 @@ class _EstadoPantallaInicio extends State<PantallaInicio> {
           subtitle: Text(post.location, style: const TextStyle(fontSize: 12)),
           trailing: IconButton(
             tooltip: 'Más opciones',
-            onPressed: () => showInstagramMessage(context, 'Publicación guardada en la simulación.'),
+            onPressed: () => showInstagramMessage(
+              context,
+              'Publicación guardada en la simulación.',
+            ),
             icon: const Icon(Icons.more_horiz),
           ),
         ),
@@ -191,10 +195,8 @@ class _EstadoPantallaInicio extends State<PantallaInicio> {
               const Spacer(),
               IconButton(
                 tooltip: 'Guardar',
-                onPressed: () => showInstagramMessage(
-                  context,
-                  'Publicación guardada.',
-                ),
+                onPressed: () =>
+                    showInstagramMessage(context, 'Publicación guardada.'),
                 icon: const Icon(Icons.bookmark_border),
               ),
             ],

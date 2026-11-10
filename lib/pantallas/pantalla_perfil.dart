@@ -47,7 +47,7 @@ class _EstadoPantallaPerfil extends State<PantallaPerfil> {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     _ProfileStat(value: '6', label: 'publicaciones'),
-                    _ProfileStat(value: '248', label: 'seguidores'),
+                    _ProfileStat(value: '3.1 mill.', label: 'seguidores'),
                     _ProfileStat(value: '310', label: 'seguidos'),
                   ],
                 ),
@@ -64,7 +64,7 @@ class _EstadoPantallaPerfil extends State<PantallaPerfil> {
         ),
         const Padding(
           padding: EdgeInsets.fromLTRB(18, 3, 18, 12),
-          child: Text('Compartiendo momentos ✨'),
+          child: Text('Compartiendo momentos ✨, six seven 6🫲🥴🫱7'),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),

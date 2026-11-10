@@ -4,7 +4,7 @@ import '../componentes/navegacion_principal.dart';
 
 // Credenciales estáticas para probar el acceso sin servidor ni base de datos.
 const String usuarioCorrecto = 'admin';
-const String passwordCorrecta = '1234';
+const String passwordCorrecta = '123456';
 
 // Pantalla de acceso: conserva los valores de los campos y el estado del formulario.
 class PantallaInicioSesion extends StatefulWidget {
@@ -38,9 +38,7 @@ class _EstadoPantallaInicioSesion extends State<PantallaInicioSesion> {
       ScaffoldMessenger.of(context)
         ..hideCurrentSnackBar()
         ..showSnackBar(
-          const SnackBar(
-            content: Text('Usuario o contraseña incorrectos.'),
-          ),
+          const SnackBar(content: Text('Usuario o contraseña incorrectos.')),
         );
       return;
     }
@@ -50,7 +48,7 @@ class _EstadoPantallaInicioSesion extends State<PantallaInicioSesion> {
       MaterialPageRoute<void>(
         builder: (_) => NavegacionPrincipal(
           username: _usernameController.text.trim(),
-          onLogout: () {
+          onLogout: (context) {
             // Cerrar sesión elimina las pantallas anteriores y vuelve al login.
             Navigator.of(context).pushAndRemoveUntil(
               MaterialPageRoute<void>(
@@ -112,7 +110,8 @@ class _EstadoPantallaInicioSesion extends State<PantallaInicioSesion> {
                           borderSide: BorderSide(color: Color(0xFF30343A)),
                         ),
                       ),
-                      validator: (value) => value == null || value.trim().isEmpty
+                      validator: (value) =>
+                          value == null || value.trim().isEmpty
                           ? 'Ingresa tu usuario.'
                           : null,
                     ),
@@ -197,9 +196,7 @@ class _EstadoPantallaInicioSesion extends State<PantallaInicioSesion> {
                         ..hideCurrentSnackBar()
                         ..showSnackBar(
                           const SnackBar(
-                            content: Text(
-                              'Inicio con Facebook (simulación).',
-                            ),
+                            content: Text('Inicio con Facebook (simulación).'),
                           ),
                         ),
                       icon: const Icon(Icons.facebook),

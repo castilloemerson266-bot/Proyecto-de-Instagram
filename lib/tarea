@@ -1,0 +1,206 @@
+PROGRAMACIÓN MULTIPLATAFORMA | II PARCIAL
+
+Proyecto práctico: Simulación de interfaces con Flutter y Dart
+Desarrollo de pantallas, navegación y componentes visuales.
+
+1. Descripción de la actividad
+Los estudiantes deberán desarrollar una aplicación utilizando Flutter y Dart, tomando como referencia una aplicación reconocida que será asignada mediante sorteo.
+
+El proyecto consiste en simular las interfaces básicas de la aplicación seleccionada, reproduciendo sus principales características visuales y permitiendo la navegación entre diferentes pantallas.
+
+No se pretende desarrollar una copia completa de la aplicación original ni implementar sus servicios reales. El trabajo estará enfocado en el diseño de interfaces, organización del código y navegación.
+
+Objetivo principal: Aplicar los conocimientos adquiridos sobre widgets, estructura de proyectos Flutter, navegación entre pantallas, formularios básicos y manejo de estados mediante una simulación visual y funcional.
+2. Objetivos de aprendizaje
+Crear interfaces utilizando Flutter y Dart.
+Organizar el proyecto mediante archivos independientes.
+Implementar navegación entre diferentes pantallas.
+Utilizar widgets para construir interfaces visuales.
+Desarrollar un formulario de acceso con datos estáticos.
+Implementar interacciones básicas con el usuario.
+Gestionar y entregar el código mediante un repositorio Git.
+3. Aplicaciones para el sorteo
+Cada equipo deberá simular la aplicación que le corresponda mediante sorteo, entre las siguientes opciones:
+
+Aplicación	Tipo de aplicación
+Spotify	Música y reproducción multimedia.
+Uber Eats	Pedidos y servicios de comida.
+Instagram	Red social y publicaciones.
+Duolingo	Aprendizaje de idiomas.
+4. Plataforma de desarrollo
+Cada equipo tendrá la libertad de seleccionar una de las siguientes plataformas para desarrollar su simulación:
+
+Web
+Escritorio
+Móvil
+El diseño deberá corresponder a la plataforma seleccionada. No será obligatorio desarrollar el proyecto para más de una plataforma.
+
+5. Pantallas obligatorias
+Cada proyecto deberá implementar cuatro pantallas independientes, organizadas de la siguiente manera:
+
+5.1. Pantalla de inicio de sesión (Login)
+La aplicación deberá iniciar mostrando una pantalla de acceso con los siguientes elementos:
+
+Campo de usuario o correo electrónico.
+Campo de contraseña.
+Botón para iniciar sesión.
+Validación de campos vacíos.
+Validación de usuario y contraseña mediante datos estáticos.
+Mensaje cuando las credenciales sean incorrectas.
+Acceso a la pantalla principal cuando las credenciales coincidan.
+Importante: El Login deberá funcionar utilizando un usuario y una contraseña definidos directamente en el código Dart. No se utilizarán bases de datos ni servicios de autenticación externos.
+Ejemplo de credenciales estáticas:
+
+const String usuarioCorrecto = 'admin';
+const String passwordCorrecta = '1234';
+Cada equipo podrá definir sus propias credenciales de prueba y deberá documentarlas en el repositorio.
+
+5.2. Pantalla principal
+Representar visualmente la pantalla principal de la aplicación asignada.
+Utilizar colores, íconos, imágenes y componentes similares a la referencia.
+Mostrar contenido estático representativo de la aplicación.
+Incorporar botones u opciones para navegar hacia las otras pantallas.
+Mantener una distribución ordenada y coherente.
+5.3. Primera pantalla adicional
+Seleccionar una pantalla existente en la aplicación original.
+Reproducir sus principales elementos visuales.
+Presentar información estática relacionada con esa pantalla.
+Incorporar botones u opciones básicas de interacción.
+Permitir regresar o navegar hacia otra pantalla.
+5.4. Segunda pantalla adicional
+Seleccionar otra pantalla de la aplicación original.
+Utilizar un diseño relacionado con la identidad visual de la aplicación.
+Mostrar contenido representativo mediante datos estáticos.
+Implementar navegación coherente con las demás pantallas.
+Incorporar al menos una interacción básica.
+Observación: Las pantallas adicionales deberán corresponder a secciones reales de la aplicación asignada. No deberán agregarse pantallas sin relación únicamente para completar el requisito.
+6. Lineamientos técnicos
+6.1. Organización de archivos
+Utilizar Flutter y Dart para el desarrollo.
+Mantener main.dart como punto de entrada.
+Crear una carpeta screens dentro de lib.
+Desarrollar cada pantalla en su propio archivo Dart.
+Utilizar nombres descriptivos para clases, archivos y variables.
+Mantener el código ordenado y correctamente indentado.
+Estructura mínima sugerida:
+
+nombre_proyecto/
+|
+|-- lib/
+|   |-- main.dart
+|   |
+|   |-- screens/
+|       |-- login_screen.dart
+|       |-- home_screen.dart
+|       |-- pantalla_adicional_1.dart
+|       |-- pantalla_adicional_2.dart
+|
+|-- assets/
+|   |-- images/
+|
+|-- pubspec.yaml
+|-- README.md
+6.2. Diseño de interfaces
+Mantener similitud visual con la aplicación original.
+Utilizar correctamente colores, textos, imágenes e íconos.
+Mantener consistencia entre las diferentes pantallas.
+Evitar textos cortados, desbordamientos y componentes superpuestos.
+Organizar los elementos según la plataforma seleccionada.
+Utilizar una distribución clara y fácil de comprender.
+6.3. Widgets de Flutter
+Se deberán utilizar los widgets necesarios para construir las interfaces, entre ellos:
+
+MaterialApp
+Scaffold
+AppBar
+Column y Row
+Container y Padding
+Text, Image e Icon
+Card y ListView
+ElevatedButton e IconButton
+TextField o TextFormField
+La selección de widgets dependerá de las necesidades de cada pantalla.
+
+6.4. Navegación
+Implementar navegación funcional entre las cuatro pantallas.
+Utilizar Navigator.push(), Navigator.pop() o mecanismos equivalentes.
+Permitir que el usuario pueda avanzar y regresar según corresponda.
+Evitar botones de navegación que no realicen ninguna acción.
+Incluir una opción para cerrar sesión y regresar al Login.
+6.5. Interacciones básicas
+Además del Login y la navegación, cada proyecto deberá incluir al menos dos interacciones básicas relacionadas con la aplicación asignada.
+
+Algunos ejemplos son:
+
+Seleccionar un elemento de una lista.
+Cambiar el estado de un botón.
+Mostrar u ocultar información.
+Marcar un elemento como favorito.
+Simular una acción mediante un mensaje visual.
+Actualizar un texto o contador utilizando setState().
+Las interacciones podrán implementarse mediante StatefulWidget y setState(), cuando sea necesario.
+
+7. Alcance y limitaciones
+Este proyecto corresponde a una simulación básica de interfaces. Por lo tanto:
+
+No se utilizarán bases de datos.
+No se realizarán conexiones a servidores.
+No se consumirán APIs externas.
+No se implementará autenticación real.
+No se requiere almacenamiento permanente de información.
+No se exige implementar todas las funcionalidades de la aplicación original.
+Toda la información utilizada deberá ser estática o simulada dentro del proyecto. El enfoque principal será la construcción de pantallas, navegación e interacción básica.
+
+8. Entrega del proyecto
+Entrega obligatoria mediante repositorio Git
+Cada equipo deberá entregar en Moodle el enlace del repositorio que contenga el proyecto Flutter completo.
+
+9.1. Contenido del repositorio
+Proyecto Flutter completo.
+Archivo main.dart.
+Archivos de las cuatro pantallas.
+Archivo pubspec.yaml.
+Imágenes y recursos utilizados.
+Archivos de configuración necesarios para ejecutar el proyecto.
+Archivo README.md.
+9.2. Documentación README.md
+El archivo README deberá contener:
+
+Nombre del proyecto.
+Aplicación asignada.
+Plataforma seleccionada: Web, Escritorio o Móvil.
+Nombres de los integrantes.
+Descripción breve de la aplicación.
+Listado de las cuatro pantallas.
+Descripción de las interacciones implementadas.
+Usuario y contraseña de prueba.
+Instrucciones básicas para ejecutar el proyecto.
+9.3. Control de versiones
+El repositorio deberá mostrar avances mediante commits.
+Los commits deberán tener mensajes descriptivos.
+El repositorio deberá estar accesible para el docente.
+Si es privado, se deberá proporcionar acceso antes del cierre.
+No deberán incluirse archivos temporales ni carpetas generadas innecesariamente.
+Importante: No se aceptarán únicamente capturas de pantalla, ejecutables o archivos comprimidos como sustituto del repositorio. Se evaluará la versión disponible al momento del cierre.
+10. Presentación del proyecto
+Cada equipo deberá presentar su aplicación en funcionamiento y demostrar:
+
+La pantalla de Login y la validación de credenciales estáticas.
+La pantalla principal.
+Las dos pantallas adicionales.
+La navegación entre pantallas.
+Las interacciones básicas implementadas.
+La organización de archivos del proyecto.
+El docente podrá solicitar a cualquier integrante que explique el funcionamiento de los widgets, métodos o instrucciones utilizadas.
+
+11. Consideraciones finales
+El proyecto deberá corresponder a la aplicación asignada mediante sorteo.
+Cada equipo seleccionará Web, Escritorio o Móvil.
+Se evaluarán únicamente los requisitos establecidos en esta actividad.
+No se exigirán bases de datos, servidores ni funcionalidades avanzadas.
+El Login deberá utilizar credenciales estáticas.
+Las cuatro pantallas deberán contar con navegación coherente.
+El equipo deberá comprender y explicar el código desarrollado.
+La entrega será exclusivamente mediante el repositorio Git.
+Resultado esperado
+Una simulación básica desarrollada con Flutter y Dart para Web, Escritorio o Móvil, que incluya cuatro pantallas independientes, Login con credenciales estáticas, navegación funcional, interacciones sencillas, diseño inspirado en la aplicación asignada y código fuente completo disponible en un repositorio Git.
